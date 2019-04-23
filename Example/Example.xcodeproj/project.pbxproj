@@ -13,6 +13,10 @@
 		5C145794226F190C00751290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C145793226F190C00751290 /* Assets.xcassets */; };
 		5C145797226F190C00751290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C145795226F190C00751290 /* LaunchScreen.storyboard */; };
 		5C14579A226F190C00751290 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C145799226F190C00751290 /* main.m */; };
+		5CF6ADB1226F1D6C0013F144 /* ARCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6ADA7226F1D6B0013F144 /* ARCObject.m */; };
+		5CF6ADB2226F1D6C0013F144 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6ADA8226F1D6B0013F144 /* MainTableViewCell.m */; };
+		5CF6ADB4226F1D6C0013F144 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6ADAA226F1D6B0013F144 /* MainModel.m */; };
+		5CF6ADB5226F1D6C0013F144 /* MRCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6ADB0226F1D6C0013F144 /* MRCObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		5C145796226F190C00751290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C145798226F190C00751290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C145799226F190C00751290 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5CF6ADA7226F1D6B0013F144 /* ARCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCObject.m; sourceTree = "<group>"; };
+		5CF6ADA8226F1D6B0013F144 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		5CF6ADAA226F1D6B0013F144 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
+		5CF6ADAB226F1D6B0013F144 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		5CF6ADAC226F1D6B0013F144 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
+		5CF6ADAE226F1D6B0013F144 /* MRCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCObject.h; sourceTree = "<group>"; };
+		5CF6ADAF226F1D6C0013F144 /* ARCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCObject.h; sourceTree = "<group>"; };
+		5CF6ADB0226F1D6C0013F144 /* MRCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,14 @@
 				5C14578B226F190900751290 /* AppDelegate.m */,
 				5C14578D226F190900751290 /* ViewController.h */,
 				5C14578E226F190900751290 /* ViewController.m */,
+				5CF6ADAE226F1D6B0013F144 /* MRCObject.h */,
+				5CF6ADB0226F1D6C0013F144 /* MRCObject.m */,
+				5CF6ADAF226F1D6C0013F144 /* ARCObject.h */,
+				5CF6ADA7226F1D6B0013F144 /* ARCObject.m */,
+				5CF6ADAC226F1D6B0013F144 /* MainModel.h */,
+				5CF6ADAA226F1D6B0013F144 /* MainModel.m */,
+				5CF6ADAB226F1D6B0013F144 /* MainTableViewCell.h */,
+				5CF6ADA8226F1D6B0013F144 /* MainTableViewCell.m */,
 				5C145790226F190900751290 /* Main.storyboard */,
 				5C145793226F190C00751290 /* Assets.xcassets */,
 				5C145795226F190C00751290 /* LaunchScreen.storyboard */,
@@ -144,6 +164,10 @@
 				5C14578F226F190900751290 /* ViewController.m in Sources */,
 				5C14579A226F190C00751290 /* main.m in Sources */,
 				5C14578C226F190900751290 /* AppDelegate.m in Sources */,
+				5CF6ADB1226F1D6C0013F144 /* ARCObject.m in Sources */,
+				5CF6ADB2226F1D6C0013F144 /* MainTableViewCell.m in Sources */,
+				5CF6ADB4226F1D6C0013F144 /* MainModel.m in Sources */,
+				5CF6ADB5226F1D6C0013F144 /* MRCObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

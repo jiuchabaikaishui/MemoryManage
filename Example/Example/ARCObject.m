@@ -21,13 +21,15 @@
 - (void)dealloc {
     NSLog(@"%@(%@)销毁了", NSStringFromClass(self.class), self);
 }
-+ (instancetype)allocObject {
-    ARCObject *obj = [[ARCObject alloc] init];
-    NSLog(@"%@(%@)生成了", NSStringFromClass(obj.class), obj);
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    ARCObject *obj = [super allocWithZone:zone];
+    NSLog(@"%@生成了", obj);
+    
     return obj;
 }
+
 + (instancetype)object {
-    ARCObject __autoreleasing *obj = [self allocObject];
+    ARCObject __autoreleasing *obj = [[self alloc] init];
     return obj;
 }
 - (void)setStrongObject:(id)obj {

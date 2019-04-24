@@ -21,21 +21,41 @@
     
     return obj;
 }
++ (instancetype)object {
+    return [[[MRCObject alloc] init] autorelease];
+}
 
 + (void)generateAndHoldObject {
-    
+    MRCObject *obj = [[MRCObject alloc] init];
+    NSLog(@"%@", obj);
 }
 + (void)holdObject {
-    
+    NSMutableArray *array = nil;
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    array = [NSMutableArray array];
+    NSLog(@"%zi", array.retainCount);
+    [pool release];
+    NSLog(@"%zi", array.retainCount);
+    NSLog(@"NSAutoreleasePool结束！");
 }
 + (void)releaseNoNeedObject {
-    
+    MRCObject *obj = [[MRCObject alloc] init];
+    [obj release];
 }
 + (void)releaseNoHoldObject {
-    
+    MRCObject *obj = [[MRCObject alloc] init];
+    [obj release];
+    [obj release];
 }
 + (void)autoreleaseUse {
-    
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    MRCObject *obj = [[MRCObject alloc] init];
+    [obj autorelease];
+    [pool release];
+    NSLog(@"NSAutoreleasePool结束！");
 }
+struct ErrorStruct {
+    MRCObject *obj;
+};
 
 @end

@@ -116,6 +116,9 @@
     return _mainModel;
 }
 
+- (void)aaa:(ARCObject **)obj {
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     

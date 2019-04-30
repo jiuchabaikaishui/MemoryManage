@@ -45,19 +45,15 @@
         SectionModel *arc = [SectionModel modelWithTitle:@"ARC自动引用计数"];
         [arc addRowModelWithTitle:@"__strong修饰符" detail:@"超出作用域或重新赋值会废弃__strong变量。" selectedAction:^(UIViewController *controller, UITableView *tableView, NSIndexPath *indexPath) {
             ARCObject *obj = [[ARCObject alloc] init];
-            ARCObject *obj1;
-            {
-                NSLog(@"%@", obj1);
-                obj = [[ARCObject alloc] init];
-            }
             obj = nil;
+            {
+                ARCObject *obj1 = [[ARCObject alloc] init];
+            }
         }];
         [arc addRowModelWithTitle:@"__weak修饰符" detail:@"对象相互强引用，会产生循环引用将导致对象不会被释放，__weak修饰符不持有对象，因此可以打破对象循环引用。" selectedAction:^(UIViewController *controller, UITableView *tableView, NSIndexPath *indexPath) {
             ARCObject *obj = [[ARCObject alloc] init];
             ARCObject *obj1 = [[ARCObject alloc] init];
             
-            NSLog(@"obj: %@", obj);
-            NSLog(@"obj1: %@", obj1);
             [obj setStrongObject:obj];
             [obj1 setWeakObject:obj1];
         }];
@@ -70,12 +66,10 @@
             NSLog(@"%@", obj);
         }];
         [arc addRowModelWithTitle:@"__autoreleasing修饰符" detail:@"__autoreleasing修饰符用来代替调用autorelease方法，也就是说对象被注册到autoreleasepool中。" selectedAction:^(UIViewController *controller, UITableView *tableView, NSIndexPath *indexPath) {
-            ARCObject __weak *obj1;
+            ARCObject __weak *obj;
             @autoreleasepool {
-                obj1 = [ARCObject object];
-                NSLog(@"autoreleasepool块最后一行%@", obj1);
+                obj = [ARCObject object];
             }
-            NSLog(@"autoreleasepool块已经结束");
         }];
         typedef struct {
             ARCObject *obj;
@@ -122,15 +116,14 @@
     return _mainModel;
 }
 
+- (void)aaa:(ARCObject **)obj {
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.title = self.mainModel.title;
-}
-- (BOOL)performOperationWithError:(ARCObject **)obj {
-    *obj = [ARCObject object];
-    return NO;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

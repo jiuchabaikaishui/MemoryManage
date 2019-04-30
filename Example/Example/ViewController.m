@@ -122,10 +122,6 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.title = self.mainModel.title;
 }
-- (BOOL)performOperationWithError:(ARCObject **)obj {
-    *obj = [ARCObject object];
-    return NO;
-}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.mainModel sectionCount];
